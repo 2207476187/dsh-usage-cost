@@ -1,0 +1,7 @@
+# dsh-usage-cost bundle patch: 把本插件作为一行插入组合包。
+# 用裸包名（与 dsh-approval-gate / dsh-approval-card 一致）：会被当作模块说明符从 profile 的
+# node_modules 解析 —— 本机是 node_modules/dsh-usage-cost 这个 junction。
+# 不要写相对路径（那会相对 profile 目录解析，指不到 src/）。
+- insert:
+    - id: dsh-usage-cost
+      name: 'dsh-usage-cost'

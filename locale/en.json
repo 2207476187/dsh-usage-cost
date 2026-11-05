@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Usage Cost",
+    "description": "Adds a \"spend ≈ ¥0.08\" pill to the composer status row, converting this Session's four token billing buckets into money with the official price table; hover for per-bucket unit prices."
+  }
+}

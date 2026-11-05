@@ -1,0 +1,45 @@
+{
+  "name": "dsh-usage-cost",
+  "version": "1.0.0",
+  "description": "给 DeepSeek Harness 的 token 用量加上金额：每轮花费 + 整会话花费（按官方峰谷价）",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*": "./locale/*"
+  },
+  "files": [
+    "src",
+    "client.js",
+    "locale",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/cost.test.mjs && node test/projection.test.mjs"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "usage",
+    "cost",
+    "计费"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
